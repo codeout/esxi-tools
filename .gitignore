@@ -1,0 +1,14 @@
+# python
+__pycache__/
+
+# Environment variables for each developer
+.env*
+
+# JetBrains editor
+.idea
+
+# Tag file
+tags
+
+# link to site-pakages
+src

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+    <script src="https://inet-henge.herokuapp.com/js/cola.min.js"></script>
+    <script src="https://inet-henge.herokuapp.com/js/inet-henge.js"></script>
+    <style>
+        .group rect { opacity: 0.5; }
+
+        .node,
+        .group rect { cursor: move; }
+
+        .node rect,
+        .group rect {
+            stroke: #fff;
+            stroke-width: 1.5px;
+        }
+
+        .node text { font-size: 14px; }
+
+        .link {
+            stroke: #7a4e4e;
+            stroke-width: 3px;
+            stroke-opacity: 1;
+        }
+
+        .path-label { font-size: 7px; }
+
+
+        .loopback,
+        .interface { fill: #333; }
+    </style>
+</head>
+
+<body>
+<div id="diagram"></div>
+</body>
+
+<script>
+  // Tweak distance
+  // const distance = (force) => force.jaccardLinkLengths(100, 0.2);
+
+  // const diagram = new Diagram('#diagram', './test.json');
+  const diagram = new Diagram('#diagram', 'http://localhost:5000/data', {positionCache: false});
+  diagram.init('interface', 'vlan_id');
+</script>
+</html>
