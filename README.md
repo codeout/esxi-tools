@@ -22,10 +22,14 @@ $ pip install -r requirements.txt
 1. Start server
 
 ```shell
-$ HOST=<ESXI_HOST> USER=<ESXI_USER> PASSWORD=<ESXI_PASSWORD> python diagram.py
+$ PASSWORD="Your ESXi password" python diagram.py -H ESXI_HOST -u ESXI_USER
 ```
 
 2. Access to http://localhost:5000/static/index.html
 
 
 ### 2. List mac address
+
+```shell
+$ PASSWORD="Your ESXi password" python diagram.py -H ESXI_HOST -u ESXI_USER PORTGROUP_NAME
+```
