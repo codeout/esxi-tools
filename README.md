@@ -11,7 +11,9 @@
 ## Installation
 
 ```shell
-$ pip install -r requirements.txt
+$ git clone https://github.com/codeout/esxi-tools.git
+$ cd esxi-tools
+esxi-tools $ pip install -r requirements.txt
 ```
 
 
@@ -22,7 +24,7 @@ $ pip install -r requirements.txt
 1. Start server
 
 ```shell
-$ PASSWORD="Your ESXi password" python diagram.py -H ESXI_HOST -u ESXI_USER
+esxi-tools $ PASSWORD="Your ESXi password" python diagram.py -H ESXI_HOST -u ESXI_USER
 ```
 
 2. Access to http://localhost:5000/static/index.html
@@ -31,5 +33,5 @@ $ PASSWORD="Your ESXi password" python diagram.py -H ESXI_HOST -u ESXI_USER
 ### 2. List mac address
 
 ```shell
-$ PASSWORD="Your ESXi password" python diagram.py -H ESXI_HOST -u ESXI_USER PORTGROUP_NAME
+esxi-tools $ PASSWORD="Your ESXi password" python mac_addresses.py -H ESXI_HOST -u ESXI_USER PORTGROUP_NAME
 ```
